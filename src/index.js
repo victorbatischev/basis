@@ -1,7 +1,5 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './assets/css/index.css'
-import './assets/css/bootstrap.css'
 import './assets/css/style.css'
 import './assets/css/nivo-lightbox/default.css'
 import './assets/css/nivo-lightbox/nivo-lightbox.css'
