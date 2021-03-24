@@ -1,3 +1,5 @@
+import logo from '../assets/img/1083.png'
+
 export const Navigation = (props) => {
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
@@ -9,15 +11,14 @@ export const Navigation = (props) => {
             data-toggle='collapse'
             data-target='#bs-example-navbar-collapse-1'
           >
-            {' '}
-            <span className='sr-only'>Переключить навигацию</span>{' '}
-            <span className='icon-bar'></span>{' '}
-            <span className='icon-bar'></span>{' '}
-            <span className='icon-bar'></span>{' '}
+            <span className='sr-only'>Переключить навигацию</span>
+            <span className='icon-bar'></span>
+            <span className='icon-bar'></span>
+            <span className='icon-bar'></span>
           </button>
-          <a className='navbar-brand page-scroll' href='#page-top'>
-            БАЗИС
-          </a>{' '}
+          <a className='page-scroll' href='#page-top'>
+            <img src={logo} width={120} height={60} alt='БАЗИС' />
+          </a>
         </div>
 
         <div
@@ -44,6 +45,22 @@ export const Navigation = (props) => {
               <a href='#contact' className='page-scroll'>
                 Контакты
               </a>
+            </li>
+            <li>
+              <div className='phoneLink'>
+                Отдел продаж:
+                <a className='nopadding' href='tel:071-123-45-67'>
+                  071-123-45-67
+                </a>
+              </div>
+            </li>
+            <li>
+              <div className='phoneLink'>
+                Сервисный центр:
+                <a className='nopadding' href='tel:071-123-45-67'>
+                  071-123-45-67
+                </a>
+              </div>
             </li>
           </ul>
         </div>

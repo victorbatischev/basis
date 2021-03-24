@@ -453,6 +453,23 @@ label {
   border-bottom: 2px solid #608dfd;
 }
 
+#mapid {
+  height: 180px;
+}
+
+.nopadding {
+  margin: 0 !important;
+  padding: 0 !important;
+  font-size: 20;
+}
+
+.phoneLink {
+  padding-top: 5;
+  padding-left: 22;
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 768px) {
   #about img {
     margin: 50px 0;
