@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import emailjs from 'emailjs-com'
+import { Map } from './map'
 
 const initialState = {
   name: '',
@@ -34,7 +35,7 @@ export const Contact = (props) => {
     <div>
       <div id='contact'>
         <div className='container'>
-          <div className='col-md-8'>
+          <div className='col-md-5'>
             <div className='row'>
               <div className='section-title'>
                 <h2>Контакты</h2>
@@ -46,33 +47,29 @@ export const Contact = (props) => {
               </div>
               <form name='sentMessage' validate='true' onSubmit={handleSubmit}>
                 <div className='row'>
-                  <div className='col-md-6'>
-                    <div className='form-group'>
-                      <input
-                        type='text'
-                        id='name'
-                        name='name'
-                        className='form-control'
-                        placeholder='Ваше имя'
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className='help-block text-danger'></p>
-                    </div>
+                  <div className='col-md-6 form-group'>
+                    <input
+                      type='text'
+                      id='name'
+                      name='name'
+                      className='form-control'
+                      placeholder='Ваше имя'
+                      required
+                      onChange={handleChange}
+                    />
+                    <p className='help-block text-danger'></p>
                   </div>
-                  <div className='col-md-6'>
-                    <div className='form-group'>
-                      <input
-                        type='email'
-                        id='email'
-                        name='email'
-                        className='form-control'
-                        placeholder='Email'
-                        required
-                        onChange={handleChange}
-                      />
-                      <p className='help-block text-danger'></p>
-                    </div>
+                  <div className='col-md-6 form-group'>
+                    <input
+                      type='email'
+                      id='email'
+                      name='email'
+                      className='form-control'
+                      placeholder='Email'
+                      required
+                      onChange={handleChange}
+                    />
+                    <p className='help-block text-danger'></p>
                   </div>
                 </div>
                 <div className='form-group'>
@@ -101,25 +98,28 @@ export const Contact = (props) => {
                 <span>
                   <i className='fa fa-map-marker'></i> Адрес
                 </span>
-                {props.data ? props.data.address : 'loading'}
+                {props.data ? props.data.address : 'Загрузка...'}
               </p>
             </div>
             <div className='contact-item'>
               <p>
                 <span>
                   <i className='fa fa-phone'></i> Телефон
-                </span>{' '}
-                {props.data ? props.data.phone : 'loading'}
+                </span>
+                {props.data ? props.data.phone : 'Загрузка...'}
               </p>
             </div>
             <div className='contact-item'>
               <p>
                 <span>
                   <i className='fa fa-envelope-o'></i> Email
-                </span>{' '}
-                {props.data ? props.data.email : 'loading'}
+                </span>
+                {props.data ? props.data.email : 'Загрузка...'}
               </p>
             </div>
+          </div>
+          <div className='col-md-3 contact-info'>
+            <Map />
           </div>
           <div className='col-md-12'>
             <div className='row'>

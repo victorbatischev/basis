@@ -4,7 +4,7 @@ import '../assets/css/style.css'
 
 export const Map = (props) => (
   <MapContainer
-    style={{ width: 600, height: 400 }}
+    style={{ width: 300, height: 300, marginTop: 80 }}
     center={[48.01, 37.8]}
     zoom={13}
     scrollWheelZoom={false}
