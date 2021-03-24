@@ -48,12 +48,12 @@
   ],
   "Partners": [
     {
-      "link": "basis/img/01-small.jpg",
+      "link": "img/01-small.jpg",
       "title": "Lorem ipsum",
       "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
     },
     {
-      "link": "basis/img/02-small.jpg",
+      "link": "img/02-small.jpg",
       "title": "Lorem ipsum",
       "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
     }

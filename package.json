@@ -2,7 +2,7 @@
   "name": "basis",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://victorbatischev.github.io/basis",
+  "homepage": "http://victorbatischev.github.io/",
   "dependencies": {
     "emailjs-com": "^2.6.4",
     "leaflet": "^1.7.1",
