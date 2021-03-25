@@ -1,3 +1,5 @@
+import ModalImage from 'react-modal-image'
+
 export const Partners = (props) => {
   return (
     <div id='portfolio' className='text-center'>
@@ -15,25 +17,10 @@ export const Partners = (props) => {
               ? props.data.map((d, i) => (
                   <div
                     key={`${d.title}-${i}`}
-                    className='col-sm-6 col-md-4 col-lg-4'
+                    className='col-sm-4 col-md-4 col-lg-4'
                   >
-                    <div className='portfolio-item'>
-                      <div className='hover-bg'>
-                        <a
-                          href={d.link}
-                          title={d.title}
-                          data-lightbox-gallery='gallery1'
-                        >
-                          <div className='hover-text'>
-                            <h4>{d.text}</h4>
-                          </div>
-                          <img
-                            src={d.link}
-                            className='img-responsive'
-                            alt={d.title}
-                          />
-                        </a>
-                      </div>
+                    <div className='portfolio-item hover-bg'>
+                      <ModalImage small={d.link} large={d.link} alt={d.title} />
                     </div>
                   </div>
                 ))

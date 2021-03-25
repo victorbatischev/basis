@@ -139,13 +139,14 @@ hr {
   background-color: #608dfd;
 }
 .section-title {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 .section-title h2 {
   position: relative;
   margin-top: 10px;
   margin-bottom: 15px;
   padding-bottom: 15px;
+  font-size: 30px;
 }
 .section-title h2::after {
   position: absolute;
@@ -266,7 +267,7 @@ a:focus,
   padding: 100px 0;
 }
 .portfolio-item {
-  margin: 1px -15px 0 -14px;
+  margin: 0 15px 0 15px;
   padding: 0;
 }
 .portfolio-item .hover-bg {

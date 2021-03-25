@@ -7,6 +7,7 @@ const initialState = {
   email: '',
   message: ''
 }
+
 export const Contact = (props) => {
   const [{ name, email, message }, setState] = useState(initialState)
 
@@ -14,11 +15,14 @@ export const Contact = (props) => {
     const { name, value } = e.target
     setState((prevState) => ({ ...prevState, [name]: value }))
   }
+
   const clearState = () => setState({ ...initialState })
 
   const handleSubmit = (e) => {
     e.preventDefault()
+
     console.log(name, email, message)
+
     emailjs
       .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
       .then(
@@ -31,6 +35,7 @@ export const Contact = (props) => {
         }
       )
   }
+
   return (
     <div>
       <div id='contact'>
@@ -41,8 +46,7 @@ export const Contact = (props) => {
                 <h2>Контакты</h2>
                 <p>
                   Пожалуйста, заполните форму ниже чтобы отправить нам
-                  электронное письмо и мы свяжемся с вами при первой
-                  возможности.
+                  электронное письмо. Мы свяжемся с вами при первой возможности.
                 </p>
               </div>
               <form name='sentMessage' validate='true' onSubmit={handleSubmit}>
@@ -126,17 +130,29 @@ export const Contact = (props) => {
               <div className='social'>
                 <ul>
                   <li>
-                    <a href={props.data ? props.data.facebook : '/'}>
+                    <a
+                      href={props.data ? props.data.facebook : '/'}
+                      target='_blank'
+                      rel='noreferrer'
+                    >
                       <i className='fa fa-facebook'></i>
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.twitter : '/'}>
+                    <a
+                      href={props.data ? props.data.twitter : '/'}
+                      target='_blank'
+                      rel='noreferrer'
+                    >
                       <i className='fa fa-twitter'></i>
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.youtube : '/'}>
+                    <a
+                      href={props.data ? props.data.youtube : '/'}
+                      target='_blank'
+                      rel='noreferrer'
+                    >
                       <i className='fa fa-youtube'></i>
                     </a>
                   </li>
@@ -149,15 +165,23 @@ export const Contact = (props) => {
               <div className='social'>
                 <ul>
                   <li>
-                    <p>&copy; 2021 Все права защищены</p>
+                    <p>&copy; {new Date().getFullYear()} Все права защищены</p>
                   </li>
                   <li>
-                    <a href='https://google.com/'>
+                    <a
+                      href='https://google.com/'
+                      target='_blank'
+                      rel='noreferrer'
+                    >
                       Политика конфиденциальности
                     </a>
                   </li>
                   <li>
-                    <a href='https://google.com/'>
+                    <a
+                      href='https://google.com/'
+                      target='_blank'
+                      rel='noreferrer'
+                    >
                       Специальная оценка условий труда
                     </a>
                   </li>

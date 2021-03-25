@@ -26,12 +26,12 @@ const data = {
     }
   ],
   Contact: {
-    address: '4321 California St, San Francisco, CA 12345 ',
-    phone: '+1 123 456 1234',
-    email: 'info@company.com',
-    facebook: 'fb.com',
-    twitter: 'twitter.com',
-    youtube: 'youtube.com'
+    address: '83000 Донецк, ул. Постышева, 60',
+    phone: '071-123-45-67',
+    email: 'info@gmail.com',
+    facebook: 'https://facebook.com/',
+    twitter: 'https://twitter.com/',
+    youtube: 'https://youtube.com/'
   },
   Features: [
     {
