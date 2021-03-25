@@ -144,11 +144,27 @@ export const Contact = (props) => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div id='footer'>
-        <div className='container text-center'>
-          <p>&copy; 2021 Базис</p>
+          <div className='col-md-12'>
+            <div className='row'>
+              <div className='social'>
+                <ul>
+                  <li>
+                    <p>&copy; 2021 Все права защищены</p>
+                  </li>
+                  <li>
+                    <a href='https://google.com/'>
+                      Политика конфиденциальности
+                    </a>
+                  </li>
+                  <li>
+                    <a href='https://google.com/'>
+                      Специальная оценка условий труда
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

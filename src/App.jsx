@@ -1,10 +1,9 @@
-import { useState, useEffect } from 'react'
+import Data from './data/data'
 import { Navigation } from './components/navigation'
 import { Features } from './components/features'
 import { Services } from './components/services'
 import { Partners } from './components/partners'
 import { Contact } from './components/contact'
-import JsonData from './data/data.json'
 import SmoothScroll from 'smooth-scroll'
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
@@ -13,18 +12,13 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 })
 
 const App = () => {
-  const [landingPageData, setLandingPageData] = useState({})
-  useEffect(() => {
-    setLandingPageData(JsonData)
-  }, [])
-
   return (
     <div>
       <Navigation />
-      <Features data={landingPageData.Features} />
-      <Services data={landingPageData.Services} />
-      <Partners data={landingPageData.Partners} />
-      <Contact data={landingPageData.Contact} />
+      <Features data={Data.Features} />
+      <Services data={Data.Services} />
+      <Partners data={Data.Partners} />
+      <Contact data={Data.Contact} />
     </div>
   )
 }
