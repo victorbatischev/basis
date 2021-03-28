@@ -268,13 +268,17 @@ a:focus,
   padding: 100px 0;
 }
 .portfolio-item {
-  margin: 0 15px 0 15px;
+  margin: 15px;
   padding: 0;
 }
 .portfolio-item .hover-bg {
   overflow: hidden;
   position: relative;
   margin: 0;
+}
+.portfolio-item p {
+  font-size: 19;
+  margin-top: 10;
 }
 .hover-bg .hover-text {
   position: absolute;

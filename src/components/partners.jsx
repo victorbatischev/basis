@@ -17,10 +17,12 @@ export const Partners = (props) => {
               ? props.data.map((d, i) => (
                   <div
                     key={`${d.title}-${i}`}
-                    className='col-sm-4 col-md-4 col-lg-4'
+                    className='col-sm-3 col-md-3 col-lg-3'
                   >
                     <div className='portfolio-item hover-bg'>
                       <ModalImage small={d.link} large={d.link} alt={d.title} />
+                      <p>{d.title}</p>
+                      <div>{d.text}</div>
                     </div>
                   </div>
                 ))
