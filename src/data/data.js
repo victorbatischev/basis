@@ -26,7 +26,7 @@ const data = {
     }
   ],
   Contact: {
-    address: '83000 Донецк, ул. Постышева, 60',
+    address: 'Донецк, ул. Постышева, 60',
     phone: '071-123-45-67',
     email: 'info@gmail.com',
     facebook: 'https://facebook.com/',
@@ -36,19 +36,19 @@ const data = {
   Features: [
     {
       icon: 'fa fa-comments-o',
-      title: 'Lorem ipsum',
+      title: 'Продажа',
       text:
         'Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.'
     },
     {
       icon: 'fa fa-bullhorn',
-      title: 'Lorem ipsum',
+      title: 'Сервис',
       text:
         'Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.'
     },
     {
       icon: 'fa fa-group',
-      title: 'Lorem ipsum',
+      title: 'Ремонт',
       text:
         'Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.'
     }

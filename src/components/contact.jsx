@@ -1,5 +1,8 @@
 import { useState } from 'react'
 import emailjs from 'emailjs-com'
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+
 import { Map } from './map'
 
 const initialState = {
@@ -21,17 +24,30 @@ export const Contact = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    console.log(name, email, message)
-
     emailjs
-      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_USER_ID')
+      .send(
+        'service_b9ojg8f',
+        'template_f5hgr38',
+        {
+          from_name: name,
+          message
+        },
+        'user_SBt8DoCooRKawmvpUCqB0'
+      )
       .then(
         (result) => {
-          console.log(result.text)
           clearState()
+          console.log(result.text)
+          toast.success('Сообщение отправлено!', {
+            position: toast.POSITION.BOTTOM_LEFT
+          })
         },
         (error) => {
+          clearState()
           console.log(error.text)
+          toast.error('Произошла ошибка при отправке сообщения!', {
+            position: toast.POSITION.BOTTOM_LEFT
+          })
         }
       )
   }
@@ -60,6 +76,7 @@ export const Contact = (props) => {
                       placeholder='Ваше имя'
                       required
                       onChange={handleChange}
+                      value={name}
                     />
                     <p className='help-block text-danger'></p>
                   </div>
@@ -69,9 +86,10 @@ export const Contact = (props) => {
                       id='email'
                       name='email'
                       className='form-control'
-                      placeholder='Email'
+                      placeholder='Ваш Email'
                       required
                       onChange={handleChange}
+                      value={email}
                     />
                     <p className='help-block text-danger'></p>
                   </div>
@@ -85,24 +103,38 @@ export const Contact = (props) => {
                     placeholder='Введите сообщение'
                     required
                     onChange={handleChange}
+                    value={message}
                   ></textarea>
                   <p className='help-block text-danger'></p>
                 </div>
                 <div id='success'></div>
-                <button type='submit' className='btn btn-custom btn-lg'>
+                <button
+                  type='submit'
+                  className='btn btn-custom btn-lg center-block'
+                >
                   Отправить сообщение
                 </button>
               </form>
             </div>
           </div>
-          <div className='col-md-3 col-md-offset-1 contact-info'>
+          <div className='col-md-3 contact-info'>
             <div className='contact-item'>
               <h3>Контактные данные</h3>
               <p>
                 <span>
                   <i className='fa fa-map-marker'></i> Адрес
                 </span>
-                {props.data ? props.data.address : 'Загрузка...'}
+                {props.data ? (
+                  <a
+                    href={`https://maps.google.com/?q=${props.data.address}`}
+                    target='_blank'
+                    rel='noreferrer'
+                  >
+                    {props.data.address}
+                  </a>
+                ) : (
+                  'Загрузка...'
+                )}
               </p>
             </div>
             <div className='contact-item'>
@@ -110,7 +142,11 @@ export const Contact = (props) => {
                 <span>
                   <i className='fa fa-phone'></i> Телефон
                 </span>
-                {props.data ? props.data.phone : 'Загрузка...'}
+                {props.data ? (
+                  <a href={`tel:${props.data.phone}`}>{props.data.phone}</a>
+                ) : (
+                  'Загрузка...'
+                )}
               </p>
             </div>
             <div className='contact-item'>
@@ -118,11 +154,15 @@ export const Contact = (props) => {
                 <span>
                   <i className='fa fa-envelope-o'></i> Email
                 </span>
-                {props.data ? props.data.email : 'Загрузка...'}
+                {props.data ? (
+                  <a href={`mailto:${props.data.email}`}>{props.data.email}</a>
+                ) : (
+                  'Загрузка...'
+                )}
               </p>
             </div>
           </div>
-          <div className='col-md-3 contact-info'>
+          <div className='col-md-3 contact-info nopadding'>
             <Map />
           </div>
           <div className='col-md-12'>
@@ -191,6 +231,17 @@ export const Contact = (props) => {
           </div>
         </div>
       </div>
+      <ToastContainer
+        position='top-right'
+        autoClose={5000}
+        hideProgressBar={true}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
     </div>
   )
 }
