@@ -1,28 +1,32 @@
 const data = {
   Services: [
     {
-      icon: 'fa fa-wordpress',
-      name: 'Lorem ipsum dolor',
+      icon: process.env.PUBLIC_URL + '/img/mercury-130f.jpg',
+      name: 'Кассовый аппарат Элвес МК',
       text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.'
+        'Кассовый аппарат "Элвес МК" предназначен для осуществления денежных расчетов с населением в сфере торговли и в сфере услуг.',
+      price: '17 500'
     },
     {
-      icon: 'fa fa-cart-arrow-down',
-      name: 'Consectetur adipiscing',
+      icon: process.env.PUBLIC_URL + '/img/mercury-130f.jpg',
+      name: 'Кассовый аппарат Элвес МК',
       text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.'
+        'Кассовый аппарат "Элвес МК" предназначен для осуществления денежных расчетов с населением в сфере торговли и в сфере услуг.',
+      price: '17 500'
     },
     {
-      icon: 'fa fa-cloud-download',
-      name: 'Lorem ipsum dolor',
+      icon: process.env.PUBLIC_URL + '/img/mercury-130f.jpg',
+      name: 'Кассовый аппарат Элвес МК',
       text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.'
+        'Кассовый аппарат "Элвес МК" предназначен для осуществления денежных расчетов с населением в сфере торговли и в сфере услуг.',
+      price: '17 500'
     },
     {
-      icon: 'fa fa-language',
-      name: 'Consectetur adipiscing',
+      icon: process.env.PUBLIC_URL + '/img/mercury-130f.jpg',
+      name: 'Кассовый аппарат Элвес МК',
       text:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at.'
+        'Кассовый аппарат "Элвес МК" предназначен для осуществления денежных расчетов с населением в сфере торговли и в сфере услуг.',
+      price: '17 500'
     }
   ],
   Contact: {

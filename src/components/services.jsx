@@ -13,10 +13,17 @@ export const Services = (props) => {
           {props.data
             ? props.data.map((d, i) => (
                 <div key={`${d.name}-${i}`} className='col-md-3'>
-                  <i className={d.icon}></i>
+                  <img src={d.icon} alt={d.name} style={{ width: '60%' }} />
                   <div className='service-desc'>
                     <h3>{d.name}</h3>
                     <p>{d.text}</p>
+                    <h3>{d.price} р.</h3>
+                    <a
+                      href='#contact'
+                      className='btn btn-custom btn-lg center-block'
+                    >
+                      Заказать
+                    </a>
                   </div>
                 </div>
               ))

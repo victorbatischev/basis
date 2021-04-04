@@ -1,4 +1,4 @@
-import logo from '../assets/img/1083.png'
+import logo from '../assets/img/logo.png'
 
 export const Navigation = (props) => {
   return (
@@ -17,7 +17,7 @@ export const Navigation = (props) => {
             <span className='icon-bar'></span>
           </button>
           <a className='page-scroll' href='#page-top'>
-            <img src={logo} width={120} height={60} alt='БАЗИС' />
+            <img src={logo} width={98} height={65} alt='БАЗИС' />
           </a>
         </div>
 

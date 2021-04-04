@@ -126,7 +126,7 @@ export const Contact = (props) => {
                 </span>
                 {props.data ? (
                   <a
-                    href={`https://maps.google.com/?q=${props.data.address}`}
+                    href={`https://yandex.ru/maps/?text=${props.data.address}`}
                     target='_blank'
                     rel='noreferrer'
                   >

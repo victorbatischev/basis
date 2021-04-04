@@ -43,13 +43,13 @@ p.intro {
   line-height: 24px;
 }
 a {
-  color: #608dfd;
+  color: #5e9abc;
   font-weight: 400;
 }
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #608dfd;
+  color: #5e9abc;
 }
 ul,
 ol {
@@ -102,7 +102,7 @@ hr {
   bottom: -1px;
   width: 0;
   height: 2px;
-  background: linear-gradient(to right, #2196f3 0%, #64b5f6 100%);
+  background: linear-gradient(to right, #005291 0%, #5e9abc 100%);
   content: '';
   transition: width 0.2s;
 }
@@ -123,7 +123,7 @@ hr {
   bottom: -1px !important;
   width: 100% !important;
   height: 2px !important;
-  background: linear-gradient(to right, #2196f3 0%, #64b5f6 100%) !important;
+  background: linear-gradient(to right, #005291 0%, #5e9abc 100%) !important;
   content: '' !important;
   transition: width 0.2s !important;
 }
@@ -133,10 +133,10 @@ hr {
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
   background-color: #fff;
-  border-color: #608dfd;
+  border-color: #5e9abc;
 }
 .navbar-default .navbar-toggle:hover > .icon-bar {
-  background-color: #608dfd;
+  background-color: #5e9abc;
 }
 .section-title {
   margin-bottom: 50px;
@@ -151,7 +151,7 @@ hr {
 .section-title h2::after {
   position: absolute;
   content: '';
-  background: linear-gradient(to right, #64b5f6 0%, #2196f3 100%);
+  background: linear-gradient(to right, #5e9abc 0%, #005291 100%);
   height: 4px;
   width: 60px;
   bottom: 0;
@@ -165,8 +165,8 @@ hr {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   color: #fff;
-  background-color: #64b5f6;
-  background-image: linear-gradient(to right, #64b5f6 0%, #2196f3 100%);
+  background-color: #5e9abc;
+  background-image: linear-gradient(to right, #5e9abc 0%, #005291 100%);
   padding: 14px 34px;
   letter-spacing: 1px;
   margin: 0;
@@ -183,7 +183,7 @@ hr {
 .btn-custom.active {
   color: #fff;
   background-image: none;
-  background-color: #2196f3;
+  background-color: #005291;
 }
 .btn:active,
 .btn.active {
@@ -217,13 +217,13 @@ a:focus,
   height: 100px;
   padding: 30px 0;
   border-radius: 50%;
-  background: linear-gradient(to right, #2196f3 0%, #64b5f6 100%);
+  background: linear-gradient(to right, #005291 0%, #5e9abc 100%);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
 }
 /* Services Section */
 #services {
   padding: 100px 0;
-  background: linear-gradient(to right, #2196f3 0%, #64b5f6 100%);
+  background: linear-gradient(to right, #005291 0%, #5e9abc 100%);
   color: #fff;
 }
 #services .service-desc {
@@ -247,7 +247,7 @@ a:focus,
   width: 120px;
   height: 120px;
   padding: 40px 0;
-  background: linear-gradient(to right, #2196f3 0%, #64b5f6 100%);
+  background: linear-gradient(to right, #005291 0%, #5e9abc 100%);
   border-radius: 50%;
   color: #fff;
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.05);
@@ -262,6 +262,20 @@ a:focus,
 }
 #services .service-desc {
   margin-bottom: 40px;
+}
+#services .btn-custom {
+  margin: auto;
+  margin-top: 10px;
+  background: transparent;
+  border: 2px solid #fff;
+  width: 90%;
+}
+#services .btn-custom:hover {
+  color: #1f386e;
+  background: #fff;
+}
+#services img {
+  border-radius: 2px;
 }
 /* Portfolio Section */
 #portfolio {
@@ -280,47 +294,10 @@ a:focus,
   font-size: 19;
   margin-top: 10;
 }
-.hover-bg .hover-text {
-  position: absolute;
-  text-align: center;
-  margin: 0 auto;
-  color: #fff;
-  background: linear-gradient(
-    to right,
-    rgba(99, 114, 255, 0.8) 0%,
-    rgba(92, 169, 251, 0.8) 100%
-  );
-  padding: 30% 0 0 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: all 0.5s;
-}
-.hover-bg .hover-text > h4 {
-  opacity: 0;
-  color: #fff;
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
-  transition: all 0.3s;
-  font-size: 18px;
-  letter-spacing: 1px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-.hover-bg:hover .hover-text > h4 {
-  opacity: 1;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-}
-.hover-bg:hover .hover-text {
-  opacity: 1;
-}
 /* Contact Section */
 #contact {
   padding: 100px 0 0 0;
-  background: linear-gradient(to right, #2196f3 0%, #64b5f6 100%);
+  background: linear-gradient(to right, #005291 0%, #5e9abc 100%);
   color: rgba(255, 255, 255, 0.75);
 }
 #contact .section-title {
@@ -441,7 +418,7 @@ label {
   transition: all 0.3s;
 }
 #contact .social i.fa:hover {
-  color: #608dfd;
+  color: #5e9abc;
   background: #fff;
 }
 #contact .social a,
@@ -466,10 +443,10 @@ a:visited {
   font-size: 14px;
 }
 #footer a {
-  color: #608dfd;
+  color: #5e9abc;
 }
 #footer a:hover {
-  border-bottom: 2px solid #608dfd;
+  border-bottom: 2px solid #5e9abc;
 }
 
 #mapid {
@@ -487,6 +464,11 @@ a:visited {
   padding-left: 22;
   display: flex;
   flex-direction: column;
+}
+
+.phoneLink a,
+a:hover {
+  color: #5e9abc;
 }
 
 .contact-info {
