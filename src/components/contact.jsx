@@ -122,19 +122,21 @@ export const Contact = (props) => {
               <h3>Контактные данные</h3>
               <p>
                 <span>
-                  <i className='fa fa-map-marker'></i> Адрес
+                  <i className='fa fa-map-marker'></i> Адреса
                 </span>
-                {props.data ? (
-                  <a
-                    href={`https://yandex.ru/maps/?text=${props.data.address}`}
-                    target='_blank'
-                    rel='noreferrer'
-                  >
-                    {props.data.address}
-                  </a>
-                ) : (
-                  'Загрузка...'
-                )}
+                {props.data
+                  ? props.data.addresses.map((address) => (
+                      <div>
+                        <a
+                          href={`https://yandex.ru/maps/?text=${address}`}
+                          target='_blank'
+                          rel='noreferrer'
+                        >
+                          {address}
+                        </a>
+                      </div>
+                    ))
+                  : 'Загрузка...'}
               </p>
             </div>
             <div className='contact-item'>

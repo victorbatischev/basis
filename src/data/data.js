@@ -1,38 +1,34 @@
 const data = {
   Services: [
     {
-      icon: process.env.PUBLIC_URL + '/img/mercury-130f.jpg',
-      name: 'Кассовый аппарат Элвес МК',
+      icon: process.env.PUBLIC_URL + '/img/Элвес МК.jpg',
+      name: 'РРО КСА «Элвес МК»',
       text:
-        'Кассовый аппарат "Элвес МК" предназначен для осуществления денежных расчетов с населением в сфере торговли и в сфере услуг.',
+        'КСА «Элвес МК» — автономный портативный кассовый аппарат. Чёрно-белый дисплей, клавиатура защищена от пыли и влаги. Устройство надёжно в эксплуатации, работает при низких отрицательных температурах. Для печати чеков используется лента 57 мм шириной.',
       price: '17 500'
     },
     {
-      icon: process.env.PUBLIC_URL + '/img/mercury-130f.jpg',
-      name: 'Кассовый аппарат Элвес МК',
+      icon: process.env.PUBLIC_URL + '/img/Штрих М.jpg',
+      name: 'РРО ШТРИХ-М ПТК',
       text:
-        'Кассовый аппарат "Элвес МК" предназначен для осуществления денежных расчетов с населением в сфере торговли и в сфере услуг.',
+        'Штрих-М-ПТК – популярный фискальный регистратор. Качественная термопечать выполняется на чековой ленте шириной 80 мм, аппарат снабжён автоматическим отрезчиком чеков. Это позволяет использовать аппарат в торговых залах с высокой нагрузкой на кассы и большим потоком покупателей.',
       price: '17 500'
     },
     {
-      icon: process.env.PUBLIC_URL + '/img/mercury-130f.jpg',
-      name: 'Кассовый аппарат Элвес МК',
+      icon: process.env.PUBLIC_URL + '/img/Штрих Лайт.png',
+      name: 'РРО ШТРИХ-Лайт ПТК',
       text:
-        'Кассовый аппарат "Элвес МК" предназначен для осуществления денежных расчетов с населением в сфере торговли и в сфере услуг.',
-      price: '17 500'
-    },
-    {
-      icon: process.env.PUBLIC_URL + '/img/mercury-130f.jpg',
-      name: 'Кассовый аппарат Элвес МК',
-      text:
-        'Кассовый аппарат "Элвес МК" предназначен для осуществления денежных расчетов с населением в сфере торговли и в сфере услуг.',
+        'Штрих-Лайт ПТК – стационарный фискальный регистратор. Используется на торговых точках со средней проходимостью. Высокая скорость печати, лента термобумаги (57 мм), аппарат снабжён автоматическим отрезчиком чеков. Компактные размеры и небольшой вес обеспечивают эргономичность рабочего места.',
       price: '17 500'
     }
   ],
   Contact: {
-    address: 'Донецк, ул. Постышева, 60',
-    phone: '071-123-45-67',
-    email: 'info@gmail.com',
+    addresses: [
+      'г. Донецк, пр-т Богдана Хмельницкого, 102',
+      'г. Донецк, ул. Постышева, 60'
+    ],
+    phone: '071-519-51-49',
+    email: 'ntcbazis@mail.ru',
     facebook: 'https://facebook.com/',
     twitter: 'https://twitter.com/',
     youtube: 'https://youtube.com/'
@@ -40,35 +36,43 @@ const data = {
   Features: [
     {
       icon: 'fa fa-comments-o',
-      title: 'Продажа',
+      title: 'Производство',
       text:
-        'Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.'
+        'Компания является аккредитованным производителем регистраторов расчетных операций на территории ДНР'
     },
     {
       icon: 'fa fa-bullhorn',
-      title: 'Сервис',
+      title: 'Продажа',
       text:
-        'Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.'
+        'Продажа полного комплекса торгового оборудования для автоматизации бизнеса'
     },
     {
       icon: 'fa fa-group',
-      title: 'Ремонт',
+      title: 'Сервис',
       text:
-        'Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.'
+        'Сервисное обслуживание, ремонт регистраторов расчетных операций, весоизмерительного и другого торгового оборудования'
     }
   ],
   Partners: [
     {
-      link: process.env.PUBLIC_URL + '/img/doc1.jpg',
-      title: 'Lorem ipsum',
-      text:
-        'Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.'
+      link: process.env.PUBLIC_URL + '/img/Сертификат БАЗИС.png',
+      title: 'Базис',
+      text: ''
     },
     {
-      link: process.env.PUBLIC_URL + '/img/doc1.jpg',
-      title: 'Lorem ipsum',
-      text:
-        'Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.'
+      link: process.env.PUBLIC_URL + '/img/Сертификат Д-Маркет.png',
+      title: 'Д-Маркет',
+      text: ''
+    },
+    {
+      link: process.env.PUBLIC_URL + '/img/Сертификат Кассервис.png',
+      title: 'Кассервис',
+      text: ''
+    },
+    {
+      link: process.env.PUBLIC_URL + '/img/Сертификат Инфотех.png',
+      title: 'Инфотех',
+      text: ''
     }
   ]
 }

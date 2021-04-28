@@ -17,7 +17,7 @@ export const Navigation = (props) => {
             <span className='icon-bar'></span>
           </button>
           <a className='page-scroll' href='#page-top'>
-            <img src={logo} width={98} height={65} alt='БАЗИС' />
+            <img src={logo} width={197} height={129} alt='БАЗИС' />
           </a>
         </div>
 
@@ -49,16 +49,14 @@ export const Navigation = (props) => {
             <li>
               <div className='phoneLink'>
                 Отдел продаж:
-                <a className='nopadding' href='tel:071-123-45-67'>
-                  071-123-45-67
+                <a className='nopadding' href='tel:071-519-51-49'>
+                  071-519-51-49
                 </a>
               </div>
-            </li>
-            <li>
               <div className='phoneLink'>
                 Сервисный центр:
-                <a className='nopadding' href='tel:071-123-45-67'>
-                  071-123-45-67
+                <a className='nopadding' href='tel:071-519-51-49'>
+                  071-519-51-49
                 </a>
               </div>
             </li>

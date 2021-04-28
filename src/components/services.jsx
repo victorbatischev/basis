@@ -4,19 +4,16 @@ export const Services = (props) => {
       <div className='container'>
         <div className='section-title'>
           <h2>Продукция</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed
-            dapibus leonec.
-          </p>
+          <p></p>
         </div>
         <div className='row'>
           {props.data
             ? props.data.map((d, i) => (
-                <div key={`${d.name}-${i}`} className='col-md-3'>
+                <div key={`${d.name}-${i}`} className='col-md-4'>
                   <img src={d.icon} alt={d.name} style={{ width: '60%' }} />
                   <div className='service-desc'>
                     <h3>{d.name}</h3>
-                    <p>{d.text}</p>
+                    <p>{d.text.substring(0, 100)}...</p>
                     <h3>{d.price} р.</h3>
                     <a
                       href='#contact'
