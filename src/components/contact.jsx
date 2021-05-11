@@ -53,7 +53,7 @@ export const Contact = (props) => {
   }
 
   return (
-    <div>
+    <>
       <div id='contact'>
         <div className='container'>
           <div className='section-title text-center'>
@@ -244,6 +244,6 @@ export const Contact = (props) => {
         draggable
         pauseOnHover
       />
-    </div>
+    </>
   )
 }

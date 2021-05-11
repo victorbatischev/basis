@@ -3,7 +3,7 @@ import { YMaps, Map as YandexMap, Placemark } from 'react-yandex-maps'
 
 import '../assets/css/style.css'
 
-export const Map = (props) => (
+export const Map = () => (
   // <MapContainer
   //   style={{ width: '100%', height: 300, marginTop: 80 }}
   //   center={[47.994983, 37.805518]}

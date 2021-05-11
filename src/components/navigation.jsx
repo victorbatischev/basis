@@ -1,6 +1,6 @@
 import logo from '../assets/img/logo.jpg'
 
-export const Navigation = (props) => {
+export const Navigation = () => {
   return (
     <nav id='menu' className='navbar navbar-default navbar-fixed-top'>
       <div className='container'>
@@ -20,7 +20,6 @@ export const Navigation = (props) => {
             <img src={logo} width={281} height={85} alt='БАЗИС' />
           </a>
         </div>
-
         <div
           className='collapse navbar-collapse'
           id='bs-example-navbar-collapse-1'

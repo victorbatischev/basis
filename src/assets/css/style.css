@@ -204,8 +204,7 @@ a:focus,
 }
 /* Features Section */
 #features {
-  padding: 100px 0;
-  padding-top: 200px;
+  padding: 200px 0 60px 0;
   background: #f6f6f6;
 }
 #features i.fa {
@@ -222,7 +221,7 @@ a:focus,
 }
 /* Services Section */
 #services {
-  padding: 100px 0;
+  padding: 60px 0;
   background: linear-gradient(to right, #005291 0%, #5e9abc 100%);
   color: #fff;
 }
@@ -279,7 +278,7 @@ a:focus,
 }
 /* Portfolio Section */
 #portfolio {
-  padding: 100px 0;
+  padding: 60px 0 120px 0;
 }
 .portfolio-item {
   margin: 15px;
@@ -296,7 +295,7 @@ a:focus,
 }
 /* Contact Section */
 #contact {
-  padding: 100px 0 0 0;
+  padding: 60px 0 0 0;
   background: linear-gradient(to right, #005291 0%, #5e9abc 100%);
   color: rgba(255, 255, 255, 0.75);
 }
@@ -479,6 +478,11 @@ a:hover {
   top: -4px;
   transform: scale(1.02);
   cursor: pointer;
+}
+
+.center-button {
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
