@@ -56,15 +56,15 @@ export const Contact = (props) => {
     <div>
       <div id='contact'>
         <div className='container'>
+          <div className='section-title text-center'>
+            <h2>Контакты</h2>
+          </div>
           <div className='col-md-5'>
             <div className='row'>
-              <div className='section-title'>
-                <h2>Контакты</h2>
-                <p>
-                  Пожалуйста, заполните форму ниже чтобы отправить нам
-                  электронное письмо. Мы свяжемся с вами при первой возможности.
-                </p>
-              </div>
+              <p>
+                Пожалуйста, заполните форму ниже чтобы отправить нам электронное
+                письмо. Мы свяжемся с вами при первой возможности.
+              </p>
               <form name='sentMessage' validate='true' onSubmit={handleSubmit}>
                 <div className='row'>
                   <div className='col-md-6 form-group'>
@@ -120,13 +120,13 @@ export const Contact = (props) => {
           <div className='col-md-3 contact-info'>
             <div className='contact-item'>
               <h3>Контактные данные</h3>
-              <p>
+              <>
                 <span>
                   <i className='fa fa-map-marker'></i> Адреса
                 </span>
                 {props.data
-                  ? props.data.addresses.map((address) => (
-                      <div>
+                  ? props.data.addresses.map((address, index) => (
+                      <div key={index.toString()}>
                         <a
                           href={`https://yandex.ru/maps/?text=${address}`}
                           target='_blank'
@@ -137,7 +137,7 @@ export const Contact = (props) => {
                       </div>
                     ))
                   : 'Загрузка...'}
-              </p>
+              </>
             </div>
             <div className='contact-item'>
               <p>
@@ -164,7 +164,7 @@ export const Contact = (props) => {
               </p>
             </div>
           </div>
-          <div className='col-md-3 contact-info nopadding'>
+          <div className='col-md-3 contact-info'>
             <Map />
           </div>
           <div className='col-md-12'>
