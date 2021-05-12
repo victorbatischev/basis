@@ -26,13 +26,13 @@ export const Contact = (props) => {
 
     emailjs
       .send(
-        'service_b9ojg8f',
-        'template_f5hgr38',
+        'service_jnr9t38',
+        'template_3in6l4i',
         {
           from_name: name,
           message
         },
-        'user_SBt8DoCooRKawmvpUCqB0'
+        'user_V88ibrVd4JqNmDkfaH3zb'
       )
       .then(
         (result) => {

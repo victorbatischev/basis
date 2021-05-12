@@ -91,23 +91,28 @@ const data = {
   ],
   Partners: [
     {
-      link: process.env.PUBLIC_URL + '/img/Сертификат БАЗИС.png',
+      link: process.env.PUBLIC_URL + '/img/Сертификаты БАЗИС.jpg',
       title: 'Базис',
       text: ''
     },
     {
-      link: process.env.PUBLIC_URL + '/img/Сертификат Д-Маркет.png',
+      link: process.env.PUBLIC_URL + '/img/Сертификаты Д-Маркет.jpg',
       title: 'Д-Маркет',
       text: ''
     },
     {
-      link: process.env.PUBLIC_URL + '/img/Сертификат Кассервис.png',
+      link: process.env.PUBLIC_URL + '/img/Сертификаты Кассервис.jpg',
       title: 'Кассервис',
       text: ''
     },
     {
-      link: process.env.PUBLIC_URL + '/img/Сертификат Инфотех.png',
+      link: process.env.PUBLIC_URL + '/img/Сертификаты Инфотех.jpg',
       title: 'Инфотех',
+      text: ''
+    },
+    {
+      link: process.env.PUBLIC_URL + '/img/Сертификаты Топ-Сервис.jpg',
+      title: 'Топ-Сервис',
       text: ''
     }
   ]

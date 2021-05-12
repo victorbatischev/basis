@@ -283,6 +283,7 @@ a:focus,
 .portfolio-item {
   margin: 15px;
   padding: 0;
+  min-width: 150px;
 }
 .portfolio-item .hover-bg {
   overflow: hidden;
@@ -292,6 +293,11 @@ a:focus,
 .portfolio-item p {
   font-size: 19;
   margin-top: 10;
+}
+
+.portfolio-items {
+  display: flex;
+  flex-wrap: wrap;
 }
 /* Contact Section */
 #contact {

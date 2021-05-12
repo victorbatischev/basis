@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import emailjs from 'emailjs-com'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
@@ -19,7 +19,7 @@ const customStyles = {
   content: {
     padding: 30,
     maxWidth: 500,
-    maxHeight: 480,
+    maxHeight: 500,
     top: '50%',
     left: '50%',
     right: 'auto',
@@ -41,11 +41,11 @@ export const Services = (props) => {
   const [modalIsOpen, setIsOpen] = useState(false)
   const [detailedModalOpen, setDetailedModalOpen] = useState(false)
 
-  useEffect(() => {
-    if (modalIsOpen) {
-      setDetailedModalOpen(false)
-    }
-  }, [modalIsOpen])
+  // useEffect(() => {
+  //   if (modalIsOpen) {
+  //     setDetailedModalOpen(false)
+  //   }
+  // }, [modalIsOpen])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -59,15 +59,15 @@ export const Services = (props) => {
 
     emailjs
       .send(
-        'service_b9ojg8f',
-        'template_f5hgr38',
+        'service_jnr9t38',
+        'template_3in6l4i',
         {
           from_name: name,
           message,
           phone,
           device: modalIsOpen.name
         },
-        'user_SBt8DoCooRKawmvpUCqB0'
+        'user_V88ibrVd4JqNmDkfaH3zb'
       )
       .then(
         (result) => {
@@ -110,7 +110,10 @@ export const Services = (props) => {
                     <p>{d.text.substring(0, 100)}...</p>
                     <h3>{d.price ? `${d.price} р.` : '-'}</h3>
                     <button
-                      onClick={() => setIsOpen(d)}
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        setIsOpen(d)
+                      }}
                       className='btn btn-custom btn-lg center-block'
                     >
                       Заказать
