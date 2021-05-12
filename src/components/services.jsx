@@ -29,6 +29,27 @@ const customStyles = {
   }
 }
 
+const customDetailedStyles = {
+  overlay: {
+    zIndex: 1031,
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0, 0, 0, 0.7)'
+  },
+  content: {
+    padding: 30,
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)'
+  }
+}
+
 const initialState = {
   name: '',
   email: '',
@@ -40,12 +61,6 @@ export const Services = (props) => {
   const [{ name, email, message, phone }, setState] = useState(initialState)
   const [modalIsOpen, setIsOpen] = useState(false)
   const [detailedModalOpen, setDetailedModalOpen] = useState(false)
-
-  // useEffect(() => {
-  //   if (modalIsOpen) {
-  //     setDetailedModalOpen(false)
-  //   }
-  // }, [modalIsOpen])
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -212,26 +227,50 @@ export const Services = (props) => {
       <Modal
         isOpen={detailedModalOpen}
         onRequestClose={() => setDetailedModalOpen(false)}
-        style={customStyles}
+        style={customDetailedStyles}
       >
-        <div className='form-group' style={{ margin: '-30 -20 30 -15' }}>
+        <div className='form-group' style={{ margin: '-20 -20 30 -15' }}>
           <button
-            style={{ float: 'right', padding: '10 15', marginTop: -10 }}
+            style={{ float: 'right', padding: '10 15' }}
             className='btn btn-custom btn-lg'
             onClick={() => setDetailedModalOpen(false)}
           >
             <i className='fa fa-times'></i>
           </button>
-          <h3>{detailedModalOpen.name}</h3>
         </div>
         <div className='row'>
-          <div className='center-button'>
-            <button
-              onClick={() => setIsOpen(detailedModalOpen)}
-              className='btn btn-custom btn-lg center-block'
-            >
-              Оформить заказ
-            </button>
+          <div className='col-md-3'>
+            <img
+              src={detailedModalOpen.icon}
+              alt={detailedModalOpen.name}
+              style={{ maxHeight: 200 }}
+            />
+          </div>
+          <div className='col-md-6'>
+            <h3>{detailedModalOpen.name}</h3>
+            <p>{detailedModalOpen.text}</p>
+            <div
+              dangerouslySetInnerHTML={{
+                __html: detailedModalOpen.description
+              }}
+            />
+          </div>
+          <div className='col-md-3'>
+            <div className='center-button'>
+              <h3>
+                {detailedModalOpen.price
+                  ? `${detailedModalOpen.price} р.`
+                  : '-'}
+              </h3>
+            </div>
+            <div className='center-button'>
+              <button
+                onClick={() => setIsOpen(detailedModalOpen)}
+                className='btn btn-custom btn-lg center-block'
+              >
+                Оформить заказ
+              </button>
+            </div>
           </div>
         </div>
       </Modal>
