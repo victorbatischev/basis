@@ -271,6 +271,17 @@ export const Services = (props) => {
                 Оформить заказ
               </button>
             </div>
+            {detailedModalOpen.driver && (
+              <div className='center-button' style={{ marginTop: 20 }}>
+                <a
+                  className='btn btn-custom btn-lg center-block'
+                  href={`/drivers/${detailedModalOpen.driver}`}
+                  download
+                >
+                  Скачать драйвер
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </Modal>
