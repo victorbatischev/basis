@@ -17,7 +17,7 @@ const data = {
       Диапазон рабочих температур: -10 °C...+40 °C<br>
       Габариты: 11,6 х 23,2 х 7,3 см;<br>
       Вес: 0,9 кг</div>`,
-      driver: 'driver Элвес МК.zip'
+      driver: process.env.PUBLIC_URL + '/drivers/driver Элвес МК.zip'
     },
     {
       icon: process.env.PUBLIC_URL + '/img/Штрих М.png',
@@ -41,7 +41,7 @@ const data = {
       Диапазон рабочих температур: -10 °C...+40 °C<br>
       Габариты – 15,0 х 22,5 х 13,0 см;<br>
       Вес – 3,4 кг.`,
-      driver: 'driver Штрих-М ПТК.zip'
+      driver: process.env.PUBLIC_URL + '/drivers/driver Штрих-М ПТК.zip'
     },
     {
       icon: process.env.PUBLIC_URL + '/img/Штрих Лайт.png',

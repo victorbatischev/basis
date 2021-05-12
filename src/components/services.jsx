@@ -275,7 +275,7 @@ export const Services = (props) => {
               <div className='center-button' style={{ marginTop: 20 }}>
                 <a
                   className='btn btn-custom btn-lg center-block'
-                  href={`/drivers/${detailedModalOpen.driver}`}
+                  href={detailedModalOpen.driver}
                   download
                 >
                   Скачать драйвер
