@@ -52,6 +52,8 @@ export const Navigation = () => {
                   071-519-51-49
                 </a>
               </div>
+            </li>
+            <li>
               <div className='phoneLink'>
                 Сервисный центр:
                 <a className='nopadding' href='tel:071-519-51-49'>

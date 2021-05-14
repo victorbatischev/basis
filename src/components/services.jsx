@@ -46,7 +46,11 @@ const customDetailedStyles = {
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
-    transform: 'translate(-50%, -50%)'
+    transform: 'translate(-50%, -50%)',
+    maxWidth: 'calc(100vw - 2rem)',
+    maxHeight: 'calc(100vh - 2rem)',
+    overflowY: 'auto',
+    position: 'relative'
   }
 }
 
@@ -119,7 +123,7 @@ export const Services = (props) => {
                   className='col-md-4 card2'
                   onClick={() => setDetailedModalOpen(d)}
                 >
-                  <img src={d.icon} alt={d.name} style={{ width: '60%' }} />
+                  <img src={d.icon} alt={d.name} width={176} height={137} />
                   <div className='service-desc'>
                     <h3>{d.name}</h3>
                     <p>{d.text.substring(0, 100)}...</p>
@@ -140,7 +144,7 @@ export const Services = (props) => {
         </div>
       </div>
       <Modal
-        isOpen={modalIsOpen}
+        isOpen={modalIsOpen !== false}
         onRequestClose={() => setIsOpen(false)}
         style={customStyles}
       >
@@ -225,7 +229,7 @@ export const Services = (props) => {
         </div>
       </Modal>
       <Modal
-        isOpen={detailedModalOpen}
+        isOpen={detailedModalOpen !== false}
         onRequestClose={() => setDetailedModalOpen(false)}
         style={customDetailedStyles}
       >
@@ -243,7 +247,9 @@ export const Services = (props) => {
             <img
               src={detailedModalOpen.icon}
               alt={detailedModalOpen.name}
-              style={{ maxHeight: 200 }}
+              style={{ marginLeft: -40 }}
+              width={352}
+              height={274}
             />
           </div>
           <div className='col-md-6'>
