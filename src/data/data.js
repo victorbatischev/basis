@@ -16,7 +16,8 @@ const data = {
       Диапазон рабочих температур: -10 °C...+40 °C<br>
       Габариты: 11,6 х 23,2 х 7,3 см;<br>
       Вес: 0,9 кг</div>`,
-      driver: process.env.PUBLIC_URL + '/drivers/elves mk.zip'
+      driver: process.env.PUBLIC_URL + '/drivers/elves mk.zip',
+      instruction: 'https://www.youtube.com/watch?v=_OpYVVdxyH4'
     },
     {
       icon: process.env.PUBLIC_URL + '/img/shtrikh m.png',
@@ -72,7 +73,7 @@ const data = {
     email: 'ntcbazis@mail.ru',
     facebook: 'https://facebook.com/',
     twitter: 'https://twitter.com/',
-    youtube: 'https://youtube.com/'
+    youtube: 'https://www.youtube.com/channel/UCPt3IbwgpLIp23zsF_Nz2pQ'
   },
   Features: [
     {

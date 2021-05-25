@@ -288,6 +288,18 @@ export const Services = (props) => {
                 </a>
               </div>
             )}
+            {detailedModalOpen.instruction && (
+              <div className='center-button' style={{ marginTop: 20 }}>
+                <a
+                  className='btn btn-custom btn-lg center-block'
+                  href={detailedModalOpen.instruction}
+                  target='_blank'
+                  rel='noreferrer'
+                >
+                  Видеоинструкция
+                </a>
+              </div>
+            )}
           </div>
         </div>
       </Modal>
