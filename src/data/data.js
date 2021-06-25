@@ -117,6 +117,21 @@ const data = {
       link: process.env.PUBLIC_URL + '/img/top-service.jpg',
       title: 'Топ-Сервис',
       text: ''
+    },
+    {
+      link: process.env.PUBLIC_URL + '/img/premier.jpg',
+      title: 'Премьер',
+      text: ''
+    },
+    {
+      link: process.env.PUBLIC_URL + '/img/tehnoservice.jpg',
+      title: 'Техносервис',
+      text: ''
+    },
+    {
+      link: process.env.PUBLIC_URL + '/img/poisk.jpg',
+      title: 'Поиск',
+      text: ''
     }
   ]
 }
